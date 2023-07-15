@@ -23,7 +23,7 @@ let l = ref<number>(100)
       </div>
       <div class="h">
         <label>H:</label>
-        <input type="number" v-model="h" min="0" max="255" />
+        <input type="number" v-model="h" min="0" max="360" />
       </div>
       <div class="s">
         <label>S:</label>
