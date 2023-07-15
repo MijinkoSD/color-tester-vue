@@ -4,6 +4,8 @@ import { ref } from 'vue'
 
 let x = ref<number>(20)
 let y = ref<number>(20)
+let width = ref<number>(200)
+let height = ref<number>(200)
 let h = ref<number>(0)
 let s = ref<number>(100)
 let l = ref<number>(100)
@@ -11,7 +13,15 @@ let l = ref<number>(100)
 
 <template>
   <div id="main">
-    <TransformableBox :posX="x" :posY="y" :colorH="h" :colorS="s" :colorL="l" />
+    <TransformableBox
+      :posX="x"
+      :posY="y"
+      :width="width"
+      :height="height"
+      :colorH="h"
+      :colorS="s"
+      :colorL="l"
+    />
     <div class="input">
       <div class="x">
         <label>X:</label>
@@ -20,6 +30,14 @@ let l = ref<number>(100)
       <div class="y">
         <label>Y:</label>
         <input type="number" v-model="y" min="0" max="5000" />
+      </div>
+      <div class="width">
+        <label>Width:</label>
+        <input type="number" v-model="width" min="0" max="5000" />
+      </div>
+      <div class="height">
+        <label>Height:</label>
+        <input type="number" v-model="height" min="0" max="5000" />
       </div>
       <div class="h">
         <label>H:</label>

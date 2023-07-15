@@ -2,6 +2,8 @@
 defineProps<{
   posX: number
   posY: number
+  width?: number
+  height?: number
   colorH: number
   colorS: number
   colorL: number
@@ -14,6 +16,8 @@ defineProps<{
     :style="{
       left: posX + 'px',
       top: posY + 'px',
+      width: width + 'px',
+      height: height + 'px',
       backgroundColor: `hsl(${colorH}deg ${colorS}% ${colorL}%)`
     }"
   ></div>
