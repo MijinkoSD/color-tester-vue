@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import TransformableBox from '../templates/TransformableBox.vue'
-import NumberInput from '@/templates/NumberInput.vue'
 import { ref } from 'vue'
 
 let x = ref<number>(20)
