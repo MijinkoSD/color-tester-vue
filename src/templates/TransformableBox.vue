@@ -14,7 +14,7 @@ defineProps<{
     :style="{
       left: posX + 'px',
       top: posY + 'px',
-      backgroundColor: `hsl(${colorH}deg ${(colorS * 100) / 255}% ${(colorL * 100) / 255}%)`
+      backgroundColor: `hsl(${colorH}deg ${colorS}% ${colorL}%)`
     }"
   ></div>
 </template>

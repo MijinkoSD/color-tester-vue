@@ -27,11 +27,11 @@ let l = ref<number>(100)
       </div>
       <div class="s">
         <label>S:</label>
-        <input type="number" v-model="s" min="0" max="255" />
+        <input type="number" v-model="s" min="0" max="100" />
       </div>
       <div class="l">
         <label>L:</label>
-        <input type="number" v-model="l" min="0" max="255" />
+        <input type="number" v-model="l" min="0" max="100" />
       </div>
     </div>
   </div>
