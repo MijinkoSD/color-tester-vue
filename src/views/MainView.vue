@@ -15,11 +15,11 @@ let l = ref<number>(100)
     <div class="input">
       <div class="x">
         <label>X:</label>
-        <input type="number" v-model="x" min="0" />
+        <input type="number" v-model="x" min="0" max="5000" />
       </div>
       <div class="y">
         <label>Y:</label>
-        <input type="number" v-model="y" min="0" />
+        <input type="number" v-model="y" min="0" max="5000" />
       </div>
       <div class="h">
         <label>H:</label>
