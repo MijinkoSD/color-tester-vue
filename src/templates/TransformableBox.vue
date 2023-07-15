@@ -1,30 +1,22 @@
 <script setup lang="ts">
-import { onBeforeUpdate, ref } from 'vue'
-let props = defineProps<{
+defineProps<{
   posX: number
   posY: number
   colorH: number
   colorS: number
-  colorV: number
+  colorL: number
 }>()
-
-let styleValue = ref<string>('')
-
-onBeforeUpdate(() => {
-  generateStyle()
-})
-
-function generateStyle() {
-  let style = `left: ${props.posX}; top: ${props.posY};`
-  style += `background-color: hsl(${props.colorH}deg ${(props.colorS * 100) / 255}% ${
-    (props.colorV * 100) / 255
-  }%)`
-  styleValue.value = style
-}
 </script>
 
 <template>
-  <div class="box" :style="styleValue"></div>
+  <div
+    class="box"
+    :style="{
+      left: posX + 'px',
+      top: posY + 'px',
+      backgroundColor: `hsl(${colorH}deg ${(colorS * 100) / 255}% ${(colorL * 100) / 255}%)`
+    }"
+  ></div>
 </template>
 
 <style scoped lang="scss">
